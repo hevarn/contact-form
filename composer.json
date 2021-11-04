@@ -1,0 +1,19 @@
+{
+    "name": "hevarne/projet-contact-us-php",
+    "description": "projet formulaire contact us en php",
+    "autoload": {
+        "psr-4": {
+            "Public\\":"Public/",
+            "Router\\":"Routes/",
+            "App\\":"App/",
+            "Database\\":"Database/"
+         }
+    },
+    "authors": [
+        {
+            "name": "hevarn",
+            "email": "nunzio.moderni@gmail.com"
+        }
+    ]
+    
+}

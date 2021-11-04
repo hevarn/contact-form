@@ -1,0 +1,77 @@
+start project --->
+
+    commande "composer init"
+     copy this inside composer.json  "
+
+     "autoload": {
+        "psr-4": {
+            "Public\\":"Public/",
+            "Router\\":"Routes/",
+            "App\\":"App/",
+            "Database\\":"Database/"
+         }
+    }
+
+     " 
+/// creat private file for USERMAIL end USERSECRET
+
+/// install library --->
+    jquery "https://code.jquery.com/jquery-3.6.0.js"
+    jquery.validate "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
+
+
+/// write this inside ".htaccess" for the sever finde "index.php" inside a project ///
+.hataccess ---> 
+    RewriteEngine On 
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L]
+
+
+first step of projet --->
+    
+    creation of the basic tree structure 
+    /// 
+the App folder will manage all the controller part, it will receive all the methods
+        necessary for the operation of the project ///
+        1 --->  App
+            ---> GeneralController.php
+            ---> private.php
+            1.1 ---> Controller
+                1.1.1 ---> Controller.php
+            1.2 ---> Erros
+                1.2.1 ---> CustomError.php
+            1.3 ---> PHPMails
+                1.2.1 ---> /// add library on GitHub "https://github.com/PHPMailer/PHPMailer" in "Zip" after install this inside "PHPMailer" du projet.///
+            1.4 ---> Validation
+                1.2.1 ---> Validator.php
+
+    /// the public folder will be the link between the project and the server it will be necessary to insert all the files of type
+        css, js, and image it also contains an index.php file which will be directly read by the server /// 
+        2 --->  Public
+            ---> index.php
+            2.1 ---> Css
+                2.1.1 ---> Style.css
+            2.2 ---> img
+            2.2 ---> JS
+                2.1.1 ---> index.js
+
+    /// it will be used to process requests $_GET et $_POST /// 
+        3 --->  Routes
+            3.1 ---> Route.php
+            3.2 ---> Router.php
+
+     /// will manage the site views with a base view containing! DOCTYPE html and the nav-bar as well as the foote ///       
+     ///  all the other pages will come from inserting in a tag
+     <div class="container_custom">
+            <?= $content ?>
+     </div>///       
+        4 --->  Views
+            --->baseTamplate.php
+            4.1 ---> General
+               4.1.1  ---> HomePage.php
+
+
+
+

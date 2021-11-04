@@ -1,0 +1,259 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+	background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;     
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: .2s;
+}
+.form input:hover {
+  background: #c9c6c6;
+  transition: .2s;
+  box-shadow:  20px 20px 60px #bebebe,
+	-20px -20px 60px #ffffff;;
+}
+/*  select style */
+.select {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 15px;
+	width: 100%;
+	transition: .2s;
+  }
+  .select select {
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+	padding: 20px 15px;
+	outline: 0;
+	border: 0;
+	border-radius: 0;
+	background: #e6e6e6;
+	color: #7b7b7b;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	transition: .2s;
+  }
+  .select textarea {
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+	padding: 20px 15px;
+	outline: 0;
+	border: 0;
+	border-radius: 0;
+	background: #e6e6e6;
+	color: #7b7b7b;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	transition: .2s;
+  }
+  .select select::-ms-expand {
+	display: none;
+	transition: .2s;
+  }
+  .select select:hover,
+  .select select:focus {
+	color: #000;
+	background: #ccc;
+	transition: .2s;
+  }
+  .select select:disabled {
+	opacity: 0.5;
+	pointer-events: none;
+	transition: .2s;
+  }
+  .select__arrow {
+	position: absolute;
+	top: 16px;
+	right: 15px;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+	border-style: solid;
+	border-width: 8px 5px 0 5px;
+	border-color: #7b7b7b transparent transparent transparent;
+	transition: .2s;
+  }
+  .select select:hover ~ .select__arrow,
+  .select select:focus ~ .select__arrow {
+	border-top-color: #000;
+	transition: .2s;
+	box-shadow:  20px 20px 60px #bebebe,
+	-20px -20px 60px #ffffff;;
+  }
+  .select select:disabled ~ .select__arrow {
+	border-top-color: #ccc;
+	transition: .5s;
+  }
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  transition: .5s;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+  transition: .5s;
+  box-shadow:  20px 20px 60px #bebebe,
+	-20px -20px 60px #ffffff;;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+  transition: .5s;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+  transition: .5s;
+}
+.form .register-form {
+  display: none;
+  transition: .5s;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+  transition: .5s;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+  transition: .5s;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+  transition: .5s;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+  transition: .5s;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+  transition: .5s;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+  transition: .5s;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+  transition: .5s;
+}
+
+
+.form-control input:focus, select:hover{
+	outline: 0;
+	border-color: #777;
+	box-shadow:  20px 20px 60px #bebebe,
+	-20px -20px 60px #ffffff;;
+}
+
+.form-control.success input{
+	border-color: #2ecc71;
+}
+.form-control.success select{
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+.form-control.error select {
+	border-color: #e74c3c;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+.error{
+	color: #e74c3c;
+}
+
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+	transition: .5s;
+}
+
+.form-control.error small {
+	color: #e74c3c;
+	visibility: visible;
+	transition: .5s;
+}
+
+.custom-input input:hover{
+	background: #76b852;
+	transition: .2s;
+	box-shadow:  20px 20px 60px #bebebe,
+	-20px -20px 60px #ffffff;;
+}
